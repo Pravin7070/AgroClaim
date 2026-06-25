@@ -9,7 +9,7 @@ export const initializeSocket = (userId) => {
   }
 
   if (!socket || !socket.connected) {
-    const backendUrl = import.meta.env.VITE_BACKEND_URL || `${window.location.protocol}//${window.location.hostname}:5000`;
+    const backendUrl = import.meta.env.VITE_API_URL || `${window.location.protocol}//${window.location.hostname}:5000`;
     
     socket = io(backendUrl, {
       transports: ['websocket', 'polling'],

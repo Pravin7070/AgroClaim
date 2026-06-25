@@ -224,7 +224,7 @@ export default function OfficerSchemeReview() {
                                                 {selectedApp.documents.map((doc, idx) => (
                                                     <a
                                                         key={idx}
-                                                        href={`${import.meta.env.VITE_BACKEND_URL || ''}${doc.url}`}
+                                                        href={`${import.meta.env.VITE_API_URL || ''}${doc.url}`}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         className="p-4 bg-white border border-gray-100 rounded-2xl flex items-center gap-3 hover:shadow-lg transition-all"

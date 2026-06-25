@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Use VITE_BACKEND_URL in production (e.g. https://api.yourdomain.com); dev uses proxy when unset
-const rawBackendUrl = import.meta.env.VITE_BACKEND_URL?.replace(/\/$/, '') || '';
+// Use VITE_API_URL in production (e.g. https://api.yourdomain.com); dev uses proxy when unset
+const rawBackendUrl = import.meta.env.VITE_API_URL?.replace(/\/\/$/, '') || '';
 const baseURL = rawBackendUrl ? `${rawBackendUrl}/api` : '/api';
 
 const api = axios.create({
